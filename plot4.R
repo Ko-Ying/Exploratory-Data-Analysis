@@ -1,7 +1,7 @@
 setwd("C:/Users/Ko-Ying/Desktop")
 ECP<-read.table("household_power_consumption.txt",sep=";",header=TRUE,na.strings="?",ECP<-read.table("household_power_consumption.txt",sep=";",header=TRUE,na.strings="?",colClasses = c("character", "character", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric")))
 ECP$Date=strptime(paste(ECP$Date,ECP$Time),"%d/%m/%Y %H:%M:%S")
-ECP1=subset(ECP,(ECP$Date>=strptime("2007-02-01","%Y-%m-%d")&(ECP$Date<strptime("2007-02-03","%Y-%m-%d"))))
+ECP1=subset(ECP,(ECP$Date>=strptime("2007-02-01","%Y-%m-%d")&(ECP$Date<strptime("2007-02-02","%Y-%m-%d"))))
 library(datasets)
 png(filename="plot4.png",width=480,height=480,bg="white")
 par(mfrow = c(2, 2))
