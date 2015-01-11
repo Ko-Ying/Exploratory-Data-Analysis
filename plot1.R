@@ -1,5 +1,4 @@
 setwd("C:/Users/Ko-Ying/Desktop")
-gc()
 ECP<-read.table("household_power_consumption.txt",sep=";",header=TRUE,na.strings="?",colClasses = c("character", "character", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric")))
 ECP$Date=strptime(paste(ECP$Date,ECP$Time),"%d/%m/%Y %H:%M:%S")
 ECP1=subset(ECP,(ECP$Date>=strptime("2007-02-01","%Y-%m-%d")&(ECP$Date<strptime("2007-02-02","%Y-%m-%d"))))
